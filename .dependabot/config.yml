@@ -28,6 +28,3 @@ update_configs:
         update_type: "semver:patch"
     # Keep package.json (& lockfiles) up to date as soon as
     # Keep Dockerfile up to date, batching pull requests weekly
-  - package_manager: "docker"
-    directory: "/"
-    update_schedule: "weekly"
