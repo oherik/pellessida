@@ -16,7 +16,6 @@ module.exports = {
       fontFamily: {
         'heading': ['Merriweather Sans', 'sans-serif'],
         'body': ['Open Sans', 'sans-serif'],
-        'hand': ['Gochi Hand', 'cursive'],
       },
     }
   },
