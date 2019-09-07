@@ -33,7 +33,7 @@
       >
     </div>
     <div class="bg-pink grid-rt items-center py-12 lg:py-24">
-      <div class="what__image flex flex-col pr-8 md:pr-12 lg:pr-24 max-w-xs">
+      <div class="what__image flex flex-col mr-8 md:mr-12 lg:mr-24 max-w-xs">
         <div class="flex flex-col lg:flex-row items-center">
           <img
             src="@/assets/images/presentation.svg"
@@ -219,7 +219,7 @@ export default {
       email: `${'skri'}${'v@'}pelleohrn.se`,
       phone: `${'076-833'}${' 64'} 41`,
       windowWidth: window.innerWidth,
-      mediumBreakpoint: '768',
+      mediumBreakpoint: '1024',
     };
   },
   computed: {
@@ -342,7 +342,7 @@ export default {
   grid-column: 2/4;
   grid-row: 2;
 }
-@media (min-width: 768px) {
+@media (min-width: 1024px) {
   .hero__header {
     grid-column: 2;
   }
@@ -355,8 +355,12 @@ export default {
   .who__image {
     grid-column: 3/end;
   }
+  .what__header {
+    align-self: flex-end !important;
+  }
   .what__paragraph {
     grid-column: 3;
+    align-self: flex-start;
   }
   .contact__text {
     grid-column: 2;
