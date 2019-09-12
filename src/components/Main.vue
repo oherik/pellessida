@@ -26,15 +26,15 @@
         </p>
       </div>
       <img
-        :src="isMobile ? require('@/assets/images/pelle.png')
+        :src="isMobile ? require('@/assets/images/pelle.jpg')
           : require('@/assets/images/pelle-slanted.png')"
         class="p-3 lg:p-4 who__image"
         alt="pelle"
       >
     </div>
-    <div class="bg-pink grid-rt items-center py-12 lg:py-24">
+    <div class="bg-gradient-lightpurple-to-pink grid-rt items-center py-12 lg:py-24">
       <div class="what__image flex flex-col mr-8 md:mr-12 lg:mr-24 max-w-xs">
-        <div class="flex flex-col lg:flex-row items-center">
+        <div class="flex flex-row items-center">
           <img
             src="@/assets/images/presentation.svg"
             class="w-20 lg:w-2/5 lg:m-6 pl-6"
@@ -46,7 +46,7 @@
             alt="palm"
           >
         </div>
-        <div class="flex flex-col lg:flex-row pt-8 lg:pt-0 items-center">
+        <div class="flex flex-row pt-8 lg:pt-0 items-center">
           <img
             src="@/assets/images/press.svg"
             class="w-20 lg:w-2/5 lg:m-6 pb-8 lg:pb-10 px-2 lg:px-0"
@@ -88,7 +88,6 @@
       <form
         id="js-contact-form"
         class="contact__form w-full lg:max-w-lg flex flex-col items-center mt-8 lg:mt-0"
-        :action="`//formspree.io/${mail}`"
         method="POST"
       >
         <div class="flex flex-wrap -mx-3 mb-6 w-full">
@@ -159,7 +158,7 @@
           value="Message via http://pelleohrn.se"
         >
         <button
-          :class="['bg-turquoise hover:bg-cyan text-darkcyan font-bold font-body',
+          :class="['bg-turquoise shadow-md hover:bg-cyan text-darkcyan font-bold font-body',
                    'py-2 px-4 rounded inline-flex items-center trans']"
           type="submit"
           value="Send"
@@ -178,10 +177,10 @@
     >
       <div class="w-48 relative mt-2 h-40">
         <div
-          :class="['w-12 h-12 border-2 border-solid border-gray-500 absolute',
+          :class="['w-12 h-12 border-2 border-solid border-gray-600 absolute',
                    'z-0 top-4 left-34 rotate-45 m-auto left-0 right-0']"
         />
-        <div class="shadow-lg absolute w-full mt-6 border-8 border-solid bg-white border-frame">
+        <div class="shadow-lg absolute w-full mt-6 border-8 border-solid bg-white border-frame h-full">
           <img
             src="@/assets/images/painting-by-copywriter.png"
             class="p-3 h-full shadow-md"
@@ -200,7 +199,7 @@
         och fakturerar sen månadsvis eller ett engångsbelopp.
       </p>
       <p
-        :class="['font-body text-sm md:text-base text-gray-600 italic w-4/5 w-2/5',
+        :class="['font-body text-sm md:text-base text-gray-600 italic w-4/5 lg:w-2/5',
                  'max-w-5xl m-auto text-center py-10']"
       >
         Ikoner CC-BY av The Noun Project: David (palm), Ladalle CS (press), monkik (bok)
@@ -229,7 +228,7 @@ export default {
   },
   mounted() {
     const contactForm = document.getElementById('js-contact-form');
-    contactForm.setAttribute('action', this.email);
+    contactForm.setAttribute('action', `https://formspree.io/${this.email}`);
     document.getElementById('js-contact-phone').innerHTML = this.email;
     document.getElementById('js-contact-email').innerHTML = this.phone;
     window.onresize = () => {
@@ -244,6 +243,11 @@ export default {
 
 .bg-gradient-cyan-to-turquoise {
   background: linear-gradient(285deg, #A4E9D7, #73CFD4);
+}
+
+.bg-gradient-lightpurple-to-pink{
+  background: #FDE9FF;
+  background: linear-gradient(137deg, #FDE9FF 0%, #ffe0f8 100%);
 }
 
 .trans {
@@ -297,6 +301,7 @@ export default {
   border-right-color:  #7b654f;
   border-bottom-color: #7b654f;
   border-left-color:  #a67c52;
+
 }
 
 .rotate-45{
@@ -325,15 +330,15 @@ export default {
 }
 .what__header {
   grid-row: 1;
-  grid-column: 3;
+  grid-column: 2/4;
 }
 .what__paragraph {
   grid-row: 2;
-  grid-column: 3;
+  grid-column: 2/4;
 }
 .what__image {
-  grid-row: 1/3;
-  grid-column: 2;
+  grid-row: 3;
+  grid-column: 1/5;
 }
 .contact__text {
   grid-column: 2/4;
