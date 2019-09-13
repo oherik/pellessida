@@ -228,7 +228,7 @@ export default {
   },
   mounted() {
     const contactForm = document.getElementById('js-contact-form');
-    contactForm.setAttribute('action', `https://formspree.io/${this.email}`);
+    contactForm.setAttribute('action', `//formspree.io/${this.email}`);
     document.getElementById('js-contact-phone').innerHTML = this.email;
     document.getElementById('js-contact-email').innerHTML = this.phone;
     window.onresize = () => {
