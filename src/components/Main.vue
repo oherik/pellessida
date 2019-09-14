@@ -1,10 +1,10 @@
 <template>
   <div class="main">
-    <div class="bg-gradient-cyan-to-turquoise grid-rows-auto grid-lt py-12 lg:py-24 items-center">
+    <div class="hero bg-gradient-cyan-to-turquoise grid-rows-auto py-12 lg:py-24 items-center">
       <h1 class="hero__header font-heading font-bold text-4xl lg:text-6xl text-darkcyan mb-8">
         Vill du ha professionell hjälp med texter?
       </h1>
-      <p class="hero__paragraph font-body text-base lg:text-lg text-darkcyan pr-8 lg:pr-0">
+      <p class="hero__paragraph font-body text-base lg:text-lg text-darkcyan pr-6 lg:pr-0">
         Jag heter Pelle och jag gillar att vränga ord, hitta rätt ord och att sätta ihop ord
         till bra texter, tydlig information och säljande budskap.
       </p>
@@ -14,8 +14,8 @@
         alt="typewriter"
       >
     </div>
-    <div class="grid-lt items-center">
-      <div class="flex flex-col who__text py-12 lg:py-24">
+    <div class="who items-center">
+      <div class="flex flex-col who__text pt-12 pb-4 lg:py-24">
         <h1 class="font-heading font-bold text-2xl lg:text-4xl text-darkcyan mb-8">
           Vem är jag?
         </h1>
@@ -28,36 +28,33 @@
       <img
         :src="isMobile ? require('@/assets/images/pelle.jpg')
           : require('@/assets/images/pelle-slanted.png')"
-        class="p-3 lg:p-4 who__image"
+        class="p-3 lg:p-4 self-center who__image"
         alt="pelle"
       >
     </div>
-    <div class="bg-gradient-lightpurple-to-pink grid-rt items-center py-12 lg:py-24">
-      <div class="what__image flex flex-col mr-8 md:mr-12 lg:mr-24 max-w-xs">
-        <div class="flex flex-row items-center">
-          <img
-            src="@/assets/images/presentation.svg"
-            class="w-20 lg:w-2/5 lg:m-6 pl-6"
-            alt="presentation"
-          >
-          <img
-            src="@/assets/images/palm.svg"
-            class="w-20 lg:w-2/5 lg:m-6 pr-4 lg:pr-0 pt-8"
-            alt="palm"
-          >
-        </div>
-        <div class="flex flex-row pt-8 lg:pt-0 items-center">
-          <img
-            src="@/assets/images/press.svg"
-            class="w-20 lg:w-2/5 lg:m-6 pb-8 lg:pb-10 px-2 lg:px-0"
-            alt="press"
-          >
-          <img
-            src="@/assets/images/book.svg"
-            class="w-20 lg:w-2/5 lg:m-6 pr-4"
-            alt="book"
-          >
-        </div>
+    <div class="bg-gradient-lightpurple-to-pink what items-center py-12 lg:py-24">
+      <div class="what__image pt-6 lg:pr-24 lg:pt-0">
+        <img
+          src="@/assets/images/presentation.svg"
+          class="w-24"
+          alt="presentation"
+        >
+        <img
+          src="@/assets/images/palm.svg"
+          class="w-24"
+          alt="palm"
+        >
+
+        <img
+          src="@/assets/images/press.svg"
+          class="w-24"
+          alt="press"
+        >
+        <img
+          src="@/assets/images/book.svg"
+          class="w-24"
+          alt="book"
+        >
       </div>
       <h1 class="what__header font-heading font-bold text-2xl lg:text-4xl text-darkpurple mb-8">
         Vad kan jag skriva?
@@ -70,7 +67,7 @@
       </p>
     </div>
 
-    <div class="border-b-4 border-darkcyan grid-lt py-12 lg:py-24 items-start">
+    <div class="contact border-b-4 border-darkcyan py-12 lg:py-24 items-start">
       <div class="contact__text flex flex-col md:pr-12 lg:pr-24">
         <h1 class="font-heading font-bold text-2xl lg:text-4xl text-darkcyan mb-8">
           Hur når du mig?
@@ -87,7 +84,7 @@
 
       <form
         id="js-contact-form"
-        class="contact__form w-full lg:max-w-lg flex flex-col items-center mt-8 lg:mt-0"
+        class="contact__form w-full flex flex-col items-center mt-8 lg:mt-0"
         method="POST"
       >
         <div class="flex flex-wrap -mx-3 mb-6 w-full">
@@ -103,7 +100,7 @@
               name="name"
               :class="['font-body appearance-none block w-full text-darkcyan border-2',
                        'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-                       'focus:border-turquoise trans']"
+                       'focus:border-turquoise transition']"
               type="text"
               placeholder="Namn Namnsson"
               required
@@ -113,16 +110,15 @@
             <label
               class="block tracking-wide font-body text-darkcyan text-sm font-bold mb-2"
               for="email"
-              name="_replyto"
             >
               Email
             </label>
             <input
               id="email"
-              name="message"
+              name="_replyto"
               :class="['font-body appearance-none block w-full text-darkcyan border-2',
                        'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-                       'focus:border-turquoise trans']"
+                       'focus:border-turquoise transition']"
               type="email"
               placeholder="exempel@email.se"
               required
@@ -139,9 +135,10 @@
             </label>
             <textarea
               id="message"
+              name="message"
               :class="['font-body appearance-none block w-full text-darkcyan border-2',
                        'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-                       'focus:border-turquoise trans h-40 lg:h-auto']"
+                       'focus:border-turquoise transition h-40 lg:h-auto']"
               type="password"
               placeholder="Hej! Ses över en kopp kaffe?"
               required
@@ -162,7 +159,7 @@
         >
         <button
           :class="['bg-turquoise shadow-md hover:bg-cyan text-darkcyan font-bold font-body',
-                   'py-2 px-4 rounded inline-flex items-center trans']"
+                   'py-2 px-4 rounded inline-flex items-center transition']"
           type="submit"
           value="Send"
         >
@@ -183,7 +180,10 @@
           :class="['w-12 h-12 border-2 border-solid border-gray-600 absolute',
                    'z-0 top-4 left-34 rotate-45 m-auto left-0 right-0']"
         />
-        <div class="shadow-lg absolute w-full mt-6 border-8 border-solid bg-white border-frame h-full">
+        <div
+          :class="['shadow-lg absolute w-full mt-6 border-8 border-solid',
+                   'bg-white border-frame h-full']"
+        >
           <img
             src="@/assets/images/painting-by-copywriter.png"
             class="p-3 h-full shadow-md"
@@ -253,50 +253,8 @@ export default {
   background: linear-gradient(137deg, #FDE9FF 0%, #ffe0f8 100%);
 }
 
-.trans {
+.transition {
     transition: all .2s;
-}
-
-.grid-lt {
-  display: grid;
-  grid-template-columns: 10% 3fr 2fr 10%;
-}
-
-.grid-rt {
-  display: grid;
-  grid-template-columns: 10% 2fr 3fr 10%;
-}
-
-.grid-rows-auto {
-  grid-auto-rows: auto;
-}
-
-.gc-2 {
-  grid-column: 2;
-}
-
-.gc-3 {
-  grid-column: 3;
-}
-
-.gc-3-e {
-  grid-column: 3/end;
-}
-
-.gc-2-4 {
-  grid-column: 2/4;
-}
-
-.gr-1 {
-  grid-row: 1;
-}
-
-.gr-2 {
-  grid-row: 2;
-}
-
-.gr-1-3 {
-  grid-row: 1/3;
 }
 
 .border-frame{
@@ -312,7 +270,11 @@ export default {
 }
 
 /* BEM for some grid stuff */
-
+.hero {
+  display: grid;
+  grid-template-columns: 10% 3fr 2fr 10%;
+  grid-auto-rows: auto;
+}
 .hero__header {
   grid-row: 1;
   grid-column: 2/4;
@@ -325,29 +287,45 @@ export default {
   grid-row: 2;
   grid-column: 2;
 }
+.who {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+}
 .who__text {
   grid-column: 2/4;
 }
 .who__image {
   grid-column: 1/end;
 }
+.what {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
+  grid-template-rows: repeat(3,auto);
+}
 .what__header {
   grid-row: 1;
-  grid-column: 2/4;
+  grid-column: 2;
 }
 .what__paragraph {
   grid-row: 2;
-  grid-column: 2/4;
+  grid-column: 2;
 }
 .what__image {
   grid-row: 3;
-  grid-column: 1/5;
+  grid-column: 2;
+  display: grid;
+  grid-template-columns: repeat(4,1fr);
+  grid-gap: 2rem;
+}
+.contact {
+  display: grid;
+  grid-template-columns: 10% auto 10%;
 }
 .contact__text {
-  grid-column: 2/4;
+  grid-column: 2;
 }
 .contact__form {
-  grid-column: 2/4;
+  grid-column: 2;
   grid-row: 2;
 }
 @media (min-width: 1024px) {
@@ -357,18 +335,35 @@ export default {
   .hero__image {
     grid-row: 1/3;
   }
+  .who {
+    grid-template-columns: 10% 3fr 2fr 10%;
+  }
   .who__text {
     grid-column: 2;
   }
   .who__image {
     grid-column: 3/end;
   }
+  .what {
+    grid-template-columns: 10% auto auto 10%
+  }
   .what__header {
     align-self: flex-end !important;
+    grid-column: 3;
+  }
+  .what__image {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: max-content auto;
+    grid-row: 1/3;
+    grid-column: 2;
+    grid-gap: 3rem;
   }
   .what__paragraph {
     grid-column: 3;
     align-self: flex-start;
+  }
+  .contact {
+    grid-template-columns: 10% 3fr 2fr 10%;
   }
   .contact__text {
     grid-column: 2;
