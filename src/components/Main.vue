@@ -292,7 +292,7 @@ export default {
   grid-template-columns: 10% auto 10%;
 }
 .who__text {
-  grid-column: 2/4;
+  grid-column: 2;
 }
 .who__image {
   grid-column: 1/end;
