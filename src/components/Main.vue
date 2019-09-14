@@ -100,6 +100,7 @@
             </label>
             <input
               id="name"
+              name="name"
               :class="['font-body appearance-none block w-full text-darkcyan border-2',
                        'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
                        'focus:border-turquoise trans']"
@@ -112,11 +113,13 @@
             <label
               class="block tracking-wide font-body text-darkcyan text-sm font-bold mb-2"
               for="email"
+              name="_replyto"
             >
               Email
             </label>
             <input
               id="email"
+              name="message"
               :class="['font-body appearance-none block w-full text-darkcyan border-2',
                        'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
                        'focus:border-turquoise trans']"
