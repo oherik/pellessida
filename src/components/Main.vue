@@ -60,7 +60,7 @@
         Vad kan jag skriva?
       </h1>
       <p class="what__paragraph font-body text-base lg:text-lg text-darkerpurple">
-        Ja, egentligen allt! Jag är en lyhörd skribent, och jag lyssnar på dig, vad du vill ha och
+        Ja, egentligen allt! Jag är en lyhörd skribent, och jag lyssnar på dig vad du vill ha och
         hjälper dig att uppnå ditt mål. Det kan handla om allt ifrån researtiklar,
         företagspresentationer och texter till webbplatser till annonser, pressreleaser och
         nyhetsbrev eller att korrekturläsa en bok. Jag har Öhrnkoll på ord helt enkelt!
