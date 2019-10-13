@@ -22,5 +22,6 @@ module.exports={
                 "devDependencies": true
             }
         ],
+        "linebreak-style": 0,
    },
 };

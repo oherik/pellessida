@@ -230,13 +230,16 @@ export default {
     },
   },
   mounted() {
-    const contactForm = document.getElementById('js-contact-form');
-    contactForm.setAttribute('action', `//formspree.io/${this.email}`);
-    document.getElementById('js-contact-phone').innerHTML = this.email;
-    document.getElementById('js-contact-email').innerHTML = this.phone;
     window.onresize = () => {
       this.windowWidth = window.innerWidth;
     };
+    /* Delayed to hide email and phonenumber in prerendering */
+    setTimeout(() => {
+      const contactForm = document.getElementById('js-contact-form');
+      contactForm.setAttribute('action', `//formspree.io/${this.email}`);
+      document.getElementById('js-contact-phone').innerHTML = this.email;
+      document.getElementById('js-contact-email').innerHTML = this.phone;
+    }, 500);
   },
 };
 </script>
