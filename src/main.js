@@ -22,7 +22,7 @@ const root = new Vue({
     document.dispatchEvent(new Event('render-event'));
   },
   render: h => h(App),
-}).$mount('#app');
+})
 
 document.addEventListener('DOMContentLoaded', () => {
   root.$mount('#app');
