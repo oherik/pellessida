@@ -217,7 +217,6 @@
 export default {
   data() {
     return {
-      msg: 'Välkommen till Pelles sida',
       email: `${'skri'}${'v@'}pelleohrn.se`,
       phone: `${'076-833'}${' 64'} 41`,
       windowWidth: window.innerWidth,
@@ -230,10 +229,11 @@ export default {
     },
   },
   mounted() {
+    /* Delayed to hide email and phone number in prerendering */
     window.onresize = () => {
       this.windowWidth = window.innerWidth;
     };
-    /* Delayed to hide email and phonenumber in prerendering */
+    document.dispatchEvent(new Event('render-event'));
     setTimeout(() => {
       const contactForm = document.getElementById('js-contact-form');
       contactForm.setAttribute('action', `//formspree.io/${this.email}`);

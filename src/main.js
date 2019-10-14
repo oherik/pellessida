@@ -17,9 +17,5 @@ Vue.config.productionTip = false;
 Vue.use(VueMeta);
 
 new Vue({
-  mounted() {
-    // You'll need this for renderAfterDocumentEvent.
-    document.dispatchEvent(new Event('render-event'));
-  },
   render: h => h(App),
 }).$mount('#app');
