@@ -221,20 +221,18 @@ export default {
       phone: `${'076-833'}${' 64'} 41`,
       windowWidth: window.innerWidth,
       mediumBreakpoint: '1024',
+      isMobile: false,
     };
-  },
-  computed: {
-    isMobile() {
-      return this.windowWidth < this.mediumBreakpoint;
-    },
   },
   mounted() {
     /* Delayed to hide email and phone number in prerendering */
-    window.onresize = () => {
-      this.windowWidth = window.innerWidth;
-    };
+
     document.dispatchEvent(new Event('render-event'));
     setTimeout(() => {
+      window.onresize = () => { // TODO hitta varför inte computed funkar
+        this.windowWidth = window.innerWidth;
+        this.isMobile = this.windowWidth < this.mediumBreakpoint;
+      };
       const contactForm = document.getElementById('js-contact-form');
       contactForm.setAttribute('action', `//formspree.io/${this.email}`);
       document.getElementById('js-contact-phone').innerHTML = this.email;
