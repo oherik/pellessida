@@ -2,10 +2,10 @@
   <div class="main">
     <div class="hero bg-gradient-cyan-to-turquoise grid-rows-auto py-12 lg:py-24 items-center">
       <h1 class="hero__header font-heading font-bold text-4xl lg:text-6xl text-darkcyan mb-8">
-        Vill du ha professionell hjälp med texter?
+        Vill du ha professionell hjälp med din text?
       </h1>
       <p class="hero__paragraph font-body text-base lg:text-lg text-darkcyan pr-6 lg:pr-0">
-        Jag heter Pelle och jag gillar att vränga ord, hitta rätt ord och att sätta ihop ord
+        Jag heter Pelle Öhrn och jag gillar att vränga ord, hitta rätt ord och att sätta ihop ord
         till bra texter, tydlig information och säljande budskap.
       </p>
       <img
