@@ -16,14 +16,11 @@ Vue.config.productionTip = false;
 
 Vue.use(VueMeta);
 
-const root = new Vue({
+new Vue({
   mounted() {
     // You'll need this for renderAfterDocumentEvent.
     document.dispatchEvent(new Event('render-event'));
   },
   render: h => h(App),
-})
-
-document.addEventListener('DOMContentLoaded', () => {
-  root.$mount('#app');
-});
+  mounted: () => document.dispatchEvent(new Event("x-app-rendered")),
+}).$mount('#app');
