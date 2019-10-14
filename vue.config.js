@@ -5,7 +5,7 @@ module.exports = {
       renderRoutes: [
         '/',
       ],
-      useRenderEvent: true,
+      useRenderEvent: false,
       headless: true,
       onlyProduction: true
     }
