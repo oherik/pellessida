@@ -21,8 +21,8 @@
         </h1>
         <p class="font-body text-base lg:text-lg text-darkcyan">
           Jag är utbildad copywriter på Berghs School of Communication och har arbetat 15 år som
-          copywriter på en reklambyrå i Karlstad, kombinerat med mycket lång erfarenhet av
-          kundkontakter och marknadsföring.
+          copywriter på en reklambyrå i Karlstad. Dessutom har jag
+          jobbat hela mitt yrkesliv med försäljning, kundkontakter och marknadsföring.
         </p>
       </div>
       <img
@@ -64,10 +64,11 @@
         Vad kan jag skriva?
       </h1>
       <p class="what__paragraph font-body text-base lg:text-lg text-darkerpurple">
-        Ja, egentligen allt! Jag är en lyhörd skribent, och jag lyssnar på dig vad du vill ha och
-        hjälper dig att uppnå ditt mål. Det kan handla om allt ifrån researtiklar,
-        företagspresentationer och texter till webbplatser till annonser, pressreleaser och
-        nyhetsbrev eller att korrekturläsa en bok. Jag har Öhrnkoll på ord helt enkelt!
+        Ja, egentligen allt! Jag är en lyhörd skribent som tar mig tid att lyssna på
+        vad du vill ha och hjälper dig att uppnå dina mål. Det kan handla om allt
+        ifrån researtiklar, texter till webbplatser, företagspresentationer och
+        annonser till pressreleaser och nyhetsbrev eller att korrekturläsa en bok.
+        Jag har Öhrnkoll på ord, helt enkelt!
       </p>
     </div>
 
@@ -77,10 +78,7 @@
           Hur når du mig?
         </h1>
         <p class="font-body text-base lg:text-lg text-darkcyan">
-          I formuläret
-          <span class="inline lg:hidden">nedanför</span>
-          <span class="hidden lg:inline">bredvid</span>
-          kan du skriva ett meddelande till mig, så hör jag av mig
+          I formuläret här kan du skriva ett meddelande, så hör jag av mig
           inom kort. Du kan också skicka ett mail eller slå en signal.
           <br>Pelle Öhrn
           <br><span id="js-contact-phone" />
