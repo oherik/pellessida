@@ -26,9 +26,13 @@
         </p>
       </div>
       <img
-        :src="isMobile ? require('@/assets/images/pelle.jpg')
-          : require('@/assets/images/pelle-slanted.png')"
-        class="p-3 lg:p-4 self-center who__image"
+        :src="require('@/assets/images/pelle.jpg')"
+        class="p-3 lg:p-4 self-center who__image block lg:hidden"
+        alt="pelle"
+      >
+      <img
+        :src="require('@/assets/images/pelle-slanted.png')"
+        class="p-3 lg:p-4 self-center who__image hidden lg:block"
         alt="pelle"
       >
     </div>
@@ -73,7 +77,9 @@
           Hur når du mig?
         </h1>
         <p class="font-body text-base lg:text-lg text-darkcyan">
-          I formuläret här {{ isMobile ? 'nedanför' : 'bredvid' }}
+          I formuläret
+          <span class="inline lg:hidden">nedanför</span>
+          <span class="hidden lg:inline">bredvid</span>
           kan du skriva ett meddelande till mig, så hör jag av mig
           inom kort. Du kan också skicka ett mail eller slå en signal.
           <br>Pelle Öhrn
@@ -219,18 +225,11 @@ export default {
     return {
       email: `${'skri'}${'v@'}pelleohrn.se`,
       phone: `${'076-833'}${' 64'} 41`,
-      windowWidth: window.innerWidth,
-      mediumBreakpoint: '1024',
-      isMobile: false,
     };
   },
   mounted() {
     /* Delayed to hide email and phone number in prerendering */
     setTimeout(() => {
-      window.onresize = () => {
-        this.windowWidth = window.innerWidth;
-        this.isMobile = this.windowWidth < this.mediumBreakpoint;
-      };
       const contactForm = document.getElementById('js-contact-form');
       contactForm.setAttribute('action', `//formspree.io/${this.email}`);
       document.getElementById('js-contact-phone').innerHTML = this.email;
