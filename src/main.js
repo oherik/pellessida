@@ -1,6 +1,6 @@
 import Vue from 'vue';
 
-import '@/assets/css/tailwind.css';
+import './assets/css/tailwind.css';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
