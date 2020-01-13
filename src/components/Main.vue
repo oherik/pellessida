@@ -81,8 +81,10 @@
           I formuläret här kan du skriva ett meddelande, så hör jag av mig
           inom kort. Du kan också skicka ett mail eller slå en signal.
           <br>Pelle Öhrn
+          <!--googleoff: all-->
           <br><span id="js-contact-phone" />
           <br><span id="js-contact-email" />
+          <!--googleon: all-->
         </p>
       </div>
 
