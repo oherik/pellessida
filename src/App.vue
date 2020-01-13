@@ -33,7 +33,7 @@ export default {
         vmid: 'og:description',
       },
       {
-        property: 'description',
+        name: 'description',
         content: 'Jag gillar att vränga ord, hitta rätt ord och att sätta ihop ord till bra texter, tydlig information och säljande budskap.',
       },
       {
