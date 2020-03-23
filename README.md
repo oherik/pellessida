@@ -1,4 +1,5 @@
-# pellessida
+# Pelle Öhrn, copywriter
+This is the website for my dad's copywriting business, [pelleohrn.se](https://www.pelleohrn.se/). It's a simple single page application created with [Vue CLI](https://cli.vuejs.org/), using [Tailwind CSS](https://tailwindcss.com/) for styling, [FontAwesome](https://fontawesome.com/) for icon elements, and [a prerender plugin](https://github.com/chrisvfritz/prerender-spa-plugin) for better SEO.
 
 ## Project setup
 ```
@@ -15,15 +16,7 @@ yarn run serve
 yarn run build
 ```
 
-### Run your tests
-```
-yarn run test
-```
-
 ### Lints and fixes files
 ```
 yarn run lint
 ```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
