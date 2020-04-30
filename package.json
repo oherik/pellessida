@@ -13,7 +13,7 @@
     "@fortawesome/vue-fontawesome": "^0.1.9",
     "core-js": "^3.6.5",
     "eslint-plugin-html": "^6.0.2",
-    "tailwindcss": "^1.2.0",
+    "tailwindcss": "^1.4.1",
     "vue": "^2.6.11",
     "vue-meta": "^2.3.3"
   },
