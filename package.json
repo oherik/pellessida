@@ -12,7 +12,7 @@
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
     "@fortawesome/vue-fontawesome": "^0.1.10",
     "core-js": "^3.6.5",
-    "eslint-plugin-html": "^6.0.3",
+    "eslint-plugin-html": "^6.1.0",
     "tailwindcss": "^1.4.6",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0"
