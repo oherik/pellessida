@@ -49,29 +49,7 @@
     <div
       class="bg-gradient-lightpurple-to-pink what items-center py-12 lg:py-24"
     >
-      <div class="what__image pt-6 lg:pr-24 lg:pt-0">
-        <img
-          src="@/assets/images/presentation.svg"
-          class="w-24"
-          alt="presentation"
-        />
-        <img
-          src="@/assets/images/palm.svg"
-          class="w-24"
-          alt="palm"
-        />
-
-        <img
-          src="@/assets/images/press.svg"
-          class="w-24"
-          alt="press"
-        />
-        <img
-          src="@/assets/images/book.svg"
-          class="w-24"
-          alt="book"
-        />
-      </div>
+      <TextSamples class="what__samples pt-6 lg:pr-24 lg:pt-0" />
       <h1
         class="what__header font-heading font-bold text-2xl lg:text-4xl text-darkpurple mb-8"
       >
@@ -128,15 +106,6 @@
         tidsperiod skriver BolagsBolaget att avtal med dig, och fakturerar sen
         månadsvis eller ett engångsbelopp.
       </p>
-      <p
-        :class="[
-          'font-body text-sm md:text-base text-gray-600 italic w-4/5 lg:w-2/5',
-          'max-w-5xl m-auto text-center py-10',
-        ]"
-      >
-        Ikoner CC-BY av The Noun Project: David (palm), Ladalle CS (press),
-        monkik (bok) och Mark Medina (presentation).
-      </p>
     </div>
   </div>
 </template>
@@ -144,11 +113,13 @@
 <script>
 import Form from "./Form.vue";
 import Painting from "./Painting.vue";
+import TextSamples from "./TextSamples/TextSamples.vue";
 
 export default {
   components: {
     Form,
     Painting,
+    TextSamples,
   },
   data() {
     return {
@@ -174,7 +145,6 @@ export default {
 }
 
 .bg-gradient-lightpurple-to-pink {
-  background: #fde9ff;
   background: linear-gradient(137deg, #fde9ff 0%, #ffe0f8 100%);
 }
 
@@ -219,12 +189,9 @@ export default {
   grid-row: 2;
   grid-column: 2;
 }
-.what__image {
+.what__samples {
   grid-row: 3;
   grid-column: 2;
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 2rem;
 }
 .contact {
   display: grid;
@@ -260,7 +227,7 @@ export default {
     align-self: flex-end !important;
     grid-column: 3;
   }
-  .what__image {
+  .what__samples {
     grid-template-rows: 1fr 1fr;
     grid-template-columns: max-content auto;
     grid-row: 1/3;

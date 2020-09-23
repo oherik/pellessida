@@ -17,6 +17,9 @@ module.exports = {
         'heading': ['Merriweather Sans', 'sans-serif'],
         'body': ['Open Sans', 'sans-serif'],
       },
+      opacity: {
+        '85': '0.85'
+      }
     }
   },
   variants: {},
