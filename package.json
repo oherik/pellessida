@@ -10,10 +10,10 @@
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^1.2.30",
     "@fortawesome/free-solid-svg-icons": "^5.14.0",
-    "@fortawesome/vue-fontawesome": "^0.1.10",
+    "@fortawesome/vue-fontawesome": "^2.0.0",
     "core-js": "^3.6.5",
-    "eslint-plugin-html": "^6.0.3",
-    "tailwindcss": "^1.4.6",
+    "eslint-plugin-html": "^6.1.0",
+    "tailwindcss": "^1.8.10",
     "vue": "^2.6.12",
     "vue-meta": "^2.4.0"
   },
