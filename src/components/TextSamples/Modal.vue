@@ -11,8 +11,11 @@
         class="fixed z-10 inset-0 transition-opacity flex justify-center"
       >
         <div
-          class="absolute inset-0 bg-gray-900 opacity-75"
+          class="absolute inset-0 opacity-0"
           @click="$emit('input', false)"
+        ></div>
+        <div
+          class="pointer-events-none absolute inset-0 bg-gray-900 opacity-75 "
         ></div>
         <div
           :class="[
@@ -44,7 +47,7 @@
             </button>
           </div>
           <div class="mb-12 mx-auto w-full max-w-xl px-4">
-            <!-- The text is passed as a prop so we can edit the CSS in here -->
+            <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
             <p
               v-for="paragraph in text"
               :key="paragraph.slice(0,10)"
