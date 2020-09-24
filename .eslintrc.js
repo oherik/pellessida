@@ -22,12 +22,4 @@ module.exports = {
     "linebreak-style": 0,
     "import/extensions": 0
   },
-  settings: {
-    "import/resolver": {
-      node: {
-          extensions: [".js", ".jsx", ".ts", ".tsx"],
-          moduleDirectory: ["node_modules", "src/"],
-      },
-    },
-  },
 };

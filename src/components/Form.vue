@@ -18,7 +18,7 @@
           :class="[
             'font-body appearance-none block w-full text-darkcyan border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-            'focus:border-turquoise transition',
+            'focus:border-turquoise transition duration-200',
           ]"
           type="text"
           placeholder="Namn Namnsson"
@@ -38,7 +38,7 @@
           :class="[
             'font-body appearance-none block w-full text-darkcyan border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-            'focus:border-turquoise transition',
+            'focus:border-turquoise transition duration-200',
           ]"
           type="email"
           placeholder="exempel@email.se"
@@ -60,7 +60,7 @@
           :class="[
             'font-body appearance-none block w-full text-darkcyan border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
-            'focus:border-turquoise transition h-40 lg:h-auto',
+            'focus:border-turquoise transition h-40 lg:h-auto duration-200',
           ]"
           type="password"
           placeholder="Hej! Ses över en kopp kaffe?"
@@ -82,8 +82,10 @@
     />
     <button
       :class="[
-        'bg-turquoise shadow-md hover:bg-cyan text-darkcyan font-bold font-body',
+        'bg-turquoise shadow-md text-darkcyan font-bold font-body',
         'py-4 px-8 md:py-2 md:px-4 rounded inline-flex items-center transition',
+        'duration-200 focus:outline-none focus:bg-cyan focus:shadow-lg',
+        'hover:bg-cyan hover:shadow-lg focus:shadow-outline'
       ]"
       type="submit"
       value="Send"
@@ -113,10 +115,3 @@ export default {
   },
 };
 </script>
-
-
-<style scoped>
-.transition {
-  transition: all 0.2s;
-}
-</style>

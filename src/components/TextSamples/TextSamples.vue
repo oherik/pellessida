@@ -2,6 +2,7 @@
   <div>
     <TextSample
       title="Tilos"
+      :text="tilos"
     >
       <template v-slot:icon>
         <font-awesome-icon
@@ -10,12 +11,6 @@
         />
       </template>
     </TextSample>
-    <p
-      v-for="paragraph in tilos"
-      :key="paragraph[0]"
-    >
-      {{ paragraph }}
-    </p>
   </div>
 </template>
 
