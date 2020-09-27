@@ -16,6 +16,10 @@ Vue.config.productionTip = false;
 
 Vue.use(VueMeta);
 
+const VueScrollTo = require("vue-scrollto");
+
+Vue.use(VueScrollTo);
+
 const root = new Vue({
   mounted() {
     // Needed for renderAfterDocumentEvent.

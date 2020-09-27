@@ -3,15 +3,19 @@ module.exports = {
     
     extend: {
       colors: {
-        cyan: '#73CFD4',
-        turquoise: '#A4E9D7',
-        darkturquoise: '#6eb1a0',
+        cyan: {
+          light: "#d8eef0",
+          default: '#73CFD4',
+          dark: "#121B21"
+        },
+        turquoise: {
+          default:'#A4E9D7'
+        },
         pink: '#FDE9FF',
-        darkpink: '#9B8AAB',
-        darkcyan: '#121B21',
-        purple: '#7743b6',
-        darkpurple: '#10081A',
-        darkerpurple: '#0C0513',
+        purple: {
+          default: '#7743b6',
+          dark: '#10081A'
+        },
       },
       fontFamily: {
         'heading': ['Merriweather Sans', 'sans-serif'],

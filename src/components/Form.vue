@@ -7,7 +7,7 @@
     <div class="flex flex-wrap -mx-3 mb-6 w-full">
       <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-2 lg:pr-3">
         <label
-          class="block tracking-wide font-body text-darkcyan font-bold mb-2"
+          class="block tracking-wide font-body text-cyan-dark font-bold mb-2"
           for="name"
         >
           Namn
@@ -16,7 +16,7 @@
           id="name"
           name="name"
           :class="[
-            'font-body appearance-none block w-full text-darkcyan border-2',
+            'font-body appearance-none block w-full text-cyan-dark border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
             'focus:border-turquoise transition duration-200',
           ]"
@@ -27,7 +27,7 @@
       </div>
       <div class="w-full md:w-1/2 md:pl-2 lg:pl-3">
         <label
-          class="block tracking-wide font-body text-darkcyan font-bold mb-2"
+          class="block tracking-wide font-body text-cyan-dark font-bold mb-2"
           for="email"
         >
           Email
@@ -36,7 +36,7 @@
           id="email"
           name="_replyto"
           :class="[
-            'font-body appearance-none block w-full text-darkcyan border-2',
+            'font-body appearance-none block w-full text-cyan-dark border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
             'focus:border-turquoise transition duration-200',
           ]"
@@ -49,7 +49,7 @@
     <div class="flex flex-wrap -mx-3 mb-12 md:mb-6 w-full">
       <div class="w-full">
         <label
-          class="block tracking-wide font-body text-darkcyan  font-bold mb-2"
+          class="block tracking-wide font-body text-cyan-dark  font-bold mb-2"
           for="message"
         >
           Meddelande
@@ -58,7 +58,7 @@
           id="message"
           name="message"
           :class="[
-            'font-body appearance-none block w-full text-darkcyan border-2',
+            'font-body appearance-none block w-full text-cyan-dark border-2',
             'border-gray-300 rounded py-3 px-4 mb-3 leading-tight focus:outline-none',
             'focus:border-turquoise transition h-40 lg:h-auto duration-200',
           ]"
@@ -80,13 +80,8 @@
       name="_subject"
       value="Message via http://pelleohrn.se"
     />
-    <button
-      :class="[
-        'bg-turquoise shadow-md text-darkcyan font-bold font-body',
-        'py-4 px-8 md:py-2 md:px-4 rounded inline-flex items-center transition',
-        'duration-200 focus:outline-none focus:bg-cyan',
-        'hover:bg-cyan hover:shadow-lg focus:shadow-outline'
-      ]"
+
+    <Button
       type="submit"
       value="Send"
     >
@@ -95,12 +90,15 @@
         class="mr-4 md:mr-2 md:text-base text-lg "
       />
       <span class=" md:text-base text-lg">Skicka</span>
-    </button>
+    </Button>
   </form>
 </template>
 
 <script>
+import Button from "./Button.vue";
+
 export default {
+  components: { Button },
   data() {
     return {
       email: `${"skri"}${"v@"}pelleohrn.se`,

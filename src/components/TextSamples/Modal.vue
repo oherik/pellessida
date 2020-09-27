@@ -27,39 +27,53 @@
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <div class="my-4 md:mb-8 md:mt-10 mx-2 flex px-4">
-            <div class="w-1/5" />
-            <h2 class="text-center font-heading my-0 font-bold text-2xl w-3/5">
-              {{ title }}
-            </h2>
-            <div
-              class="w-1/5 items-center flex justify-end"
-            >
-              <button
-                :class="[
-                  'focus:outline-none transition w-8 h-8',
-                  'focus:shadow-outline',
-                  'duration-200 hover:text-cyan focus:text-cyan'
-                ]"
-                type="button"
+          <div class="mx-auto w-full max-w-xl px-4">
+            <div class="my-4 md:mb-8 md:mt-10 mx-2 flex">
+              <div class="w-1/5" />
+              <h2 class="text-center font-heading my-0 font-bold text-2xl w-3/5">
+                {{ title }}
+              </h2>
+              <div
+                class="w-1/5 items-center flex justify-end"
+              >
+                <button
+                  :class="[
+                    'focus:outline-none transition w-8 h-8',
+                    'focus:shadow-outline',
+                    'duration-200 hover:text-cyan focus:text-cyan'
+                  ]"
+                  type="button"
+                  @click="$emit('input', false)"
+                >
+                  <font-awesome-icon
+                    class="text-grey-700 text-3xl cursor-pointer"
+                    icon="times"
+                  />
+                </button>
+              </div>
+            </div>
+            <div class="mb-12">
+              <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
+              <p
+                v-for="paragraph in text"
+                :key="paragraph.slice(0,10)"
+                class="text-body font-body mb-4"
+              >
+                {{ paragraph }}
+              </p>
+            </div>
+            <div class="flex flex-col items-end md:flex-row md:items-center justify-end mb-8">
+              <Button
+                class="mb-8 mr-0 md:mb-0 md:mr-8 "
+                secondary
                 @click="$emit('input', false)"
               >
-                <font-awesome-icon
-                  class="text-grey-700 text-3xl cursor-pointer"
-                  icon="times"
-                />
-              </button>
+                Stäng
+              </Button>
+              <Button @click="contactMe">
+                Kontakta mig
+              </Button>
             </div>
-          </div>
-          <div class="mb-12 mx-auto w-full max-w-xl px-4">
-            <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
-            <p
-              v-for="paragraph in text"
-              :key="paragraph.slice(0,10)"
-              class="text-body font-body mb-4"
-            >
-              {{ paragraph }}
-            </p>
           </div>
         </div>
       </div>
@@ -70,7 +84,10 @@
 </template>
 
 <script>
+import Button from "../Button.vue";
+
 export default {
+  components: { Button },
   props: {
     title: {
       type: String,
@@ -83,6 +100,17 @@ export default {
     value: {
       type: Boolean,
       default: false,
+    },
+  },
+  methods: {
+    contactMe() {
+      this.$emit("input", false);
+      /**
+       * It's a bit strange to use the id hard coded like this,
+       * but I feel it's petter than prop drilling/emitting in
+       * this case.
+       */
+      this.$scrollTo("#contact-me-heading");
     },
   },
 };

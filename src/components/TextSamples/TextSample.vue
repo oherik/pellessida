@@ -2,9 +2,9 @@
   <div>
     <div
       :class="[
-        'relative rounded text-darkpurple overflow-hidden flex',
+        'relative rounded text-purple-dark overflow-hidden flex',
         'items-center justify-center shadow-md bg-white',
-        'cursor-pointer hover:shadow-lg transition focus:border-darkpurple',
+        'cursor-pointer hover:shadow-lg transition focus:border-purple-dark',
         'duration-200'
       ]"
       @click="showModal = true"
@@ -17,7 +17,7 @@
       <div
         class="absolute bottom-0 left-0 w-full h-50 bg-white bg-opacity-85 p-2"
       >
-        <p class="text-lg font-heading font-bold text-center text-darkerpurple">
+        <p class="text-lg font-heading font-bold text-center text-purple-dark">
           {{ title }}
         </p>
       </div>
@@ -26,6 +26,7 @@
       v-model="showModal"
       :title="title"
       :text="text"
+      @clickContact="contactMe"
     >
     </Modal>
   </div>
@@ -50,6 +51,11 @@ export default {
     return {
       showModal: true,
     };
+  },
+  methods: {
+    contactMe() {
+      this.showModal = false;
+    },
   },
 };
 </script>

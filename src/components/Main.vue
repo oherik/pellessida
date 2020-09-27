@@ -4,12 +4,12 @@
       class="hero bg-gradient-cyan-to-turquoise grid-rows-auto py-12 lg:py-24 items-center"
     >
       <h1
-        class="hero__header font-heading font-bold text-4xl lg:text-6xl text-darkcyan mb-8"
+        class="hero__header font-heading font-bold text-4xl lg:text-6xl text-cyan-dark mb-8"
       >
         Vill du ha professionell hjälp med din text?
       </h1>
       <p
-        class="hero__paragraph font-body text-base lg:text-lg text-darkcyan pr-6 lg:pr-0"
+        class="hero__paragraph font-body text-base lg:text-lg text-cyan-dark pr-6 lg:pr-0"
       >
         Jag heter Pelle Öhrn och jag gillar att vränga ord, hitta rätt ord och
         att sätta ihop ord till bra texter, tydlig information och säljande
@@ -24,11 +24,11 @@
     <div class="who items-center">
       <div class="flex flex-col who__text pt-12 pb-4 lg:py-24">
         <h1
-          class="font-heading font-bold text-2xl lg:text-4xl text-darkcyan mb-8"
+          class="font-heading font-bold text-2xl lg:text-4xl text-cyan-dark mb-8"
         >
           Vem är jag?
         </h1>
-        <p class="font-body text-base lg:text-lg text-darkcyan">
+        <p class="font-body text-base lg:text-lg text-cyan-dark">
           Jag är utbildad copywriter på Berghs School of Communication och har
           arbetat 15 år som copywriter på en reklambyrå i Karlstad. Dessutom har
           jag jobbat hela mitt yrkesliv med försäljning, kundkontakter och
@@ -51,12 +51,12 @@
     >
       <TextSamples class="what__samples pt-6 lg:pr-24 lg:pt-0" />
       <h1
-        class="what__header font-heading font-bold text-2xl lg:text-4xl text-darkpurple mb-8"
+        class="what__header font-heading font-bold text-2xl lg:text-4xl text-purple-dark mb-8"
       >
         Vad kan jag skriva?
       </h1>
       <p
-        class="what__paragraph font-body text-base lg:text-lg text-darkerpurple"
+        class="what__paragraph font-body text-base lg:text-lg text-purple-dark"
       >
         Ja, egentligen allt! Jag är en lyhörd skribent som tar mig tid att
         lyssna på vad du vill ha och hjälper dig att uppnå dina mål. Det kan
@@ -66,14 +66,15 @@
       </p>
     </div>
 
-    <div class="contact border-b-4 border-darkcyan py-12 lg:py-24 items-start">
+    <div class="contact border-b-4 border-cyan-dark py-12 lg:py-24 items-start">
       <div class="contact__text flex flex-col md:pr-12 lg:pr-24">
         <h1
-          class="font-heading font-bold text-2xl lg:text-4xl text-darkcyan mb-8"
+          id="contact-me-heading"
+          class="font-heading font-bold text-2xl lg:text-4xl text-cyan-dark mb-8"
         >
           Hur når du mig?
         </h1>
-        <p class="font-body text-base lg:text-lg text-darkcyan">
+        <p class="font-body text-base lg:text-lg text-cyan-dark">
           I formuläret här kan du skriva ett meddelande, så hör jag av mig inom
           kort. Du kan också skicka ett mail eller slå en signal.
           <br />Pelle Öhrn

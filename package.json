@@ -15,7 +15,8 @@
     "eslint-plugin-html": "^6.1.0",
     "tailwindcss": "^1.8.10",
     "vue": "^2.6.12",
-    "vue-meta": "^2.4.0"
+    "vue-meta": "^2.4.0",
+    "vue-scrollto": "^2.18.2"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^4.5.6",
