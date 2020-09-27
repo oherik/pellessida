@@ -84,7 +84,7 @@
       :class="[
         'bg-turquoise shadow-md text-darkcyan font-bold font-body',
         'py-4 px-8 md:py-2 md:px-4 rounded inline-flex items-center transition',
-        'duration-200 focus:outline-none focus:bg-cyan focus:shadow-lg',
+        'duration-200 focus:outline-none focus:bg-cyan',
         'hover:bg-cyan hover:shadow-lg focus:shadow-outline'
       ]"
       type="submit"

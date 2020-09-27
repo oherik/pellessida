@@ -27,24 +27,29 @@
           aria-modal="true"
           aria-labelledby="modal-headline"
         >
-          <div class="my-4 md:my-8 mx-2">
-            <h2 class="text-center font-heading my-0 font-bold text-2xl">
+          <div class="my-4 md:mb-8 md:mt-10 mx-2 flex px-4">
+            <div class="w-1/5" />
+            <h2 class="text-center font-heading my-0 font-bold text-2xl w-3/5">
               {{ title }}
             </h2>
-            <button
-              :class="[
-                'focus:outline-none transition w-8 h-8 flex items-center ',
-                'justify-center focus:shadow-outline',
-                'duration-200 hover:text-cyan focus:text-cyan'
-              ]"
-              type="button"
-              @click="$emit('input', false)"
+            <div
+              class="w-1/5 items-center flex justify-end"
             >
-              <font-awesome-icon
-                class="text-grey-700 text-3xl cursor-pointer"
-                icon="times"
-              />
-            </button>
+              <button
+                :class="[
+                  'focus:outline-none transition w-8 h-8',
+                  'focus:shadow-outline',
+                  'duration-200 hover:text-cyan focus:text-cyan'
+                ]"
+                type="button"
+                @click="$emit('input', false)"
+              >
+                <font-awesome-icon
+                  class="text-grey-700 text-3xl cursor-pointer"
+                  icon="times"
+                />
+              </button>
+            </div>
           </div>
           <div class="mb-12 mx-auto w-full max-w-xl px-4">
             <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
