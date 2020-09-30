@@ -47,25 +47,26 @@
       />
     </div>
     <div
-      class="bg-gradient-lightpurple-to-pink what items-center py-12 lg:py-24"
+      class="bg-gradient-lightpurple-to-pink items-center py-12 lg:py-24"
     >
-      <TextSamples class="what__samples pt-6 lg:pr-24 lg:pt-0" />
-      <h1
-        class="what__header font-heading font-bold text-2xl lg:text-4xl text-purple-dark mb-8"
-      >
-        Vad kan jag skriva?
-      </h1>
-      <p
-        class="what__paragraph font-body text-base lg:text-lg text-purple-dark"
-      >
-        Ja, egentligen allt! Jag är en lyhörd skribent som tar mig tid att
-        lyssna på vad du vill ha och hjälper dig att uppnå dina mål. Det kan
-        handla om allt ifrån researtiklar, texter till webbplatser,
-        företagspresentationer och annonser till pressreleaser och nyhetsbrev
-        eller att korrekturläsa en bok. Jag har Öhrnkoll på ord, helt enkelt!
-      </p>
+      <div class="mx-auto w-full max-w-5xl px-4 what">
+        <TextSamples class="what__samples mr-12" />
+        <h1
+          class="what__header font-heading font-bold text-2xl lg:text-4xl text-purple-dark mb-8"
+        >
+          Vad kan jag skriva?
+        </h1>
+        <p
+          class="what__paragraph font-body text-base lg:text-lg text-purple-dark"
+        >
+          Ja, egentligen allt! Jag är en lyhörd skribent som tar mig tid att
+          lyssna på vad du vill ha och hjälper dig att uppnå dina mål. Det kan
+          handla om allt ifrån researtiklar, texter till webbplatser,
+          företagspresentationer och annonser till pressreleaser och nyhetsbrev
+          eller att korrekturläsa en bok. Jag har Öhrnkoll på ord, helt enkelt!
+        </p>
+      </div>
     </div>
-
     <div class="contact border-b-4 border-cyan-dark py-12 lg:py-24 items-start">
       <div class="contact__text flex flex-col md:pr-12 lg:pr-24">
         <h1
@@ -149,7 +150,7 @@ export default {
   background: linear-gradient(137deg, #fde9ff 0%, #ffe0f8 100%);
 }
 
-/* BEM for some grid stuff */
+/* BEM for some grid stuff that Tailwind has trouble with */
 .hero {
   display: grid;
   grid-template-columns: 10% 3fr 2fr 10%;
@@ -179,20 +180,20 @@ export default {
 }
 .what {
   display: grid;
-  grid-template-columns: 10% auto 10%;
+  grid-template-columns: 1fr;
   grid-template-rows: repeat(3, auto);
-}
-.what__header {
-  grid-row: 1;
-  grid-column: 2;
-}
-.what__paragraph {
-  grid-row: 2;
-  grid-column: 2;
 }
 .what__samples {
   grid-row: 3;
-  grid-column: 2;
+}
+@media (min-width: 1024px) {
+  .what {
+    grid-template-columns:  repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+  }
+  .what__samples {
+    grid-row: 1/3;
+  }
 }
 .contact {
   display: grid;
@@ -220,24 +221,6 @@ export default {
   }
   .who__image {
     grid-column: 3 / end;
-  }
-  .what {
-    grid-template-columns: 10% auto auto 10%;
-  }
-  .what__header {
-    align-self: flex-end !important;
-    grid-column: 3;
-  }
-  .what__samples {
-    grid-template-rows: 1fr 1fr;
-    grid-template-columns: max-content auto;
-    grid-row: 1/3;
-    grid-column: 2;
-    grid-gap: 3rem;
-  }
-  .what__paragraph {
-    grid-column: 3;
-    align-self: flex-start;
   }
   .contact {
     grid-template-columns: 10% 3fr 2fr 10%;
