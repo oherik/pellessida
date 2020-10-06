@@ -3,12 +3,14 @@ import Vue from "vue";
 import "./assets/css/tailwind.css";
 
 import { library } from "@fortawesome/fontawesome-svg-core";
-import { faPaperPlane, faSun, faTimes } from "@fortawesome/free-solid-svg-icons";
+import {
+  faPaperPlane, faSun, faTimes, faShip, faUtensils,
+} from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/vue-fontawesome";
 import VueMeta from "vue-meta";
 import App from "./App.vue";
 
-library.add(faPaperPlane, faSun, faTimes);
+library.add(faPaperPlane, faSun, faTimes, faShip, faUtensils);
 
 Vue.component("font-awesome-icon", FontAwesomeIcon);
 

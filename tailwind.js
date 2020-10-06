@@ -13,7 +13,7 @@ module.exports = {
         },
         pink: '#FDE9FF',
         purple: {
-          default: '#7743b6',
+          default: '#302852',
           dark: '#10081A'
         },
       },

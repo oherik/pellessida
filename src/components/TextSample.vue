@@ -1,27 +1,29 @@
 <template>
   <div>
-    <div
+    <button
       :class="[
-        'relative rounded text-purple-dark overflow-hidden flex',
+        'relative rounded text-purple-dark overflow-hidden flex flex-col',
         'items-center justify-center shadow-md bg-white',
-        'cursor-pointer hover:shadow-lg transition focus:border-purple-dark',
-        'duration-200'
+        'cursor-pointer hover:shadow-xl transition focus:border-purple-dark',
+        'duration-200 transform hover:-translate-y-1 hover:scale-105',
+        'w-48 m-4',
+        'focus:outline-none focus:shadow-outline'
       ]"
       @click="showModal = true"
     >
       <span />
-      <div class="leading-4 text-6xl px-12 py-6 box-content text-purple">
+      <div class="leading-4 text-6xl px-12 h-24 box-content flex items-center">
         <slot name="icon"></slot>
       </div>
 
       <div
-        class="absolute bottom-0 left-0 w-full h-50 bg-white bg-opacity-85 p-2"
+        class="w-full bg-white p-4 flex-2 "
       >
-        <p class="text-lg font-heading font-bold text-center text-purple-dark">
+        <p class="text-xl text-purple-dark font-heading font-bold text-center">
           {{ title }}
         </p>
       </div>
-    </div>
+    </button>
     <Modal
       v-model="showModal"
       :title="title"
@@ -33,7 +35,7 @@
 </template>
 
 <script>
-import Modal from "./Modal.vue";
+import Modal from "./TextModal.vue";
 
 export default {
   components: { Modal },

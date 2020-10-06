@@ -114,8 +114,8 @@
 
 <script>
 import Form from "./Form.vue";
-import Painting from "./Painting.vue";
-import TextSamples from "./TextSamples/TextSamples.vue";
+import Painting from "../components/Painting.vue";
+import TextSamples from "./TextSamples.vue";
 
 export default {
   components: {

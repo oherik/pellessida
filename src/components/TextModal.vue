@@ -10,6 +10,7 @@
         v-if="value"
         class="fixed z-10 inset-0 transition-opacity flex justify-center"
       >
+        <!-- Close modal on background click -->
         <div
           class="absolute inset-0 opacity-0"
           @click="$emit('input', false)"
@@ -17,6 +18,7 @@
         <div
           class="pointer-events-none absolute inset-0 bg-gray-900 opacity-75 "
         ></div>
+        <!-- The modal itself -->
         <div
           :class="[
             'inline-block align-bottom bg-white rounded-lg  text-black',
@@ -84,7 +86,7 @@
 </template>
 
 <script>
-import Button from "../Button.vue";
+import Button from "./Button.vue";
 
 export default {
   components: { Button },
@@ -101,6 +103,14 @@ export default {
       type: Boolean,
       default: false,
     },
+  },
+  mounted() {
+    // Close on escape
+    document.addEventListener("keydown", (e) => {
+      if (e.keyCode === 27) {
+        this.$emit("input", false);
+      }
+    });
   },
   methods: {
     contactMe() {
