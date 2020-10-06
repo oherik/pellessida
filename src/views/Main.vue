@@ -129,9 +129,9 @@
 </template>
 
 <script>
-import Form from "./Form.vue";
+import Form from "../components/Form.vue";
 import Painting from "../components/Painting.vue";
-import TextSamples from "./TextSamples.vue";
+import TextSamples from "../components/TextSamples.vue";
 
 export default {
   components: {

@@ -38,7 +38,7 @@
 
 <script lang="ts">
 import { tilos, dinner, ferry } from "../assets/texts";
-import TextSample from "../components/TextSample.vue";
+import TextSample from "./TextSample.vue";
 
 export default {
   components: { TextSample },
