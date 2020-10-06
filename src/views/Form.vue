@@ -1,11 +1,11 @@
 <template>
   <form
     id="js-contact-form"
-    class="w-full flex flex-col items-center mt-8 lg:mt-0"
+    class="w-full flex flex-col items-center"
     method="POST"
   >
     <div class="flex flex-wrap -mx-3 mb-6 w-full">
-      <div class="w-full md:w-1/2 mb-6 md:mb-0 md:pr-2 lg:pr-3">
+      <div class="w-full lg:w-1/2 mb-6 lg:mb-0 lg:pr-2 lg:pr-3">
         <label
           class="block tracking-wide font-body text-cyan-dark font-bold mb-2"
           for="name"
@@ -25,7 +25,7 @@
           required
         />
       </div>
-      <div class="w-full md:w-1/2 md:pl-2 lg:pl-3">
+      <div class="w-full lg:w-1/2 lg:pl-2 lg:pl-3">
         <label
           class="block tracking-wide font-body text-cyan-dark font-bold mb-2"
           for="email"
@@ -46,7 +46,7 @@
         />
       </div>
     </div>
-    <div class="flex flex-wrap -mx-3 mb-12 md:mb-6 w-full">
+    <div class="flex flex-wrap -mx-3 mb-12 lg:mb-6 w-full">
       <div class="w-full">
         <label
           class="block tracking-wide font-body text-cyan-dark  font-bold mb-2"
@@ -87,9 +87,9 @@
     >
       <font-awesome-icon
         icon="paper-plane"
-        class="mr-4 md:mr-2 md:text-base text-lg "
+        class="mr-4 lg:mr-2 lg:text-base text-lg "
       />
-      <span class=" md:text-base text-lg">Skicka</span>
+      <span class=" lg:text-base text-lg">Skicka</span>
     </Button>
   </form>
 </template>

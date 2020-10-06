@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-wrap justify-center mt-4 md:mt-0">
+  <div class="flex flex-wrap justify-center mt-4 lg:mt-0">
     <TextSample
       title="Båtluff i Grekland"
       :text="tilos"

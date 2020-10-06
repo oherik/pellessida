@@ -2,7 +2,7 @@
   <button
     :class="[
       'shadow-md text-cyan-dark font-bold font-body',
-      'py-4 px-8 md:py-2 md:px-4 rounded inline-flex items-center',
+      'py-4 px-8 lg:py-2 lg:px-4 rounded inline-flex items-center',
       'transition duration-200 focus:outline-none focus:shadow-outline',
       'hover:shadow-lg', typeClasses
     ]"

@@ -30,7 +30,7 @@
           aria-labelledby="modal-headline"
         >
           <div class="mx-auto w-full max-w-xl px-4">
-            <div class="my-4 md:mb-8 md:mt-10 mx-2 flex">
+            <div class="my-4 lg:mb-8 lg:mt-10 mx-2 flex">
               <div class="w-1/5" />
               <h2 class="text-center font-heading my-0 font-bold text-2xl w-3/5">
                 {{ title }}
@@ -64,9 +64,9 @@
                 {{ paragraph }}
               </p>
             </div>
-            <div class="flex flex-col items-end md:flex-row md:items-center justify-end mb-8">
+            <div class="flex flex-col items-end lg:flex-row lg:items-center justify-end mb-8">
               <Button
-                class="mb-8 mr-0 md:mb-0 md:mr-8 "
+                class="mb-8 mr-0 lg:mb-0 lg:mr-8 "
                 secondary
                 @click="$emit('input', false)"
               >

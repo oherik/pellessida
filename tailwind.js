@@ -1,6 +1,5 @@
 module.exports = {
   theme: {
-    
     extend: {
       colors: {
         cyan: {
@@ -23,8 +22,11 @@ module.exports = {
       },
       opacity: {
         '85': '0.85'
+      },
+      inset: {
+        '1': '100%',
       }
-    }
+    }, 
   },
   variants: {},
   plugins: []

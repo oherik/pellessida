@@ -19,7 +19,7 @@
       <div
         class="w-full bg-white p-4 flex-2 "
       >
-        <p class="text-xl text-purple-dark font-heading font-bold text-center">
+        <p class="text-xl text-purple-dark font-heading text-center">
           {{ title }}
         </p>
       </div>

@@ -1,5 +1,5 @@
 <template>
-  <div class="w-48 relative mt-2 h-40 z-0 absolute">
+  <div class="w-48 mt-2 h-40 z-0 absolute inset-x-0 top-1 mx-auto">
     <div
       :class="[
         'w-12 h-12 border-2 border-solid border-gray-600 absolute',
