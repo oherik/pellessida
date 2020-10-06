@@ -58,7 +58,7 @@
               <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
               <p
                 v-for="paragraph in text"
-                :key="paragraph.slice(0,10)"
+                :key="paragraph.slice(0, 20)"
                 class="text-body font-body mb-4"
               >
                 {{ paragraph }}

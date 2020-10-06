@@ -23,3 +23,8 @@ yarn run build
 ```
 yarn run lint
 ```
+### Test
+
+```
+yarn run test:unit
+```
