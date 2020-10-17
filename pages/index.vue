@@ -44,7 +44,7 @@
       </div>
       <img
         :src="require('@/assets/images/pelle.jpg')"
-        class="p-3 lg:p-4 self-center lg:justify-self-center who__image block lg:hidden"
+        class="p-3 mx-auto lg:p-4 self-center lg:justify-self-center who__image block lg:hidden"
         alt="Pelle Öhrn"
       >
       <img
