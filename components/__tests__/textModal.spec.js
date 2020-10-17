@@ -2,6 +2,7 @@ import { shallowMount } from "@vue/test-utils";
 // eslint-disable-next-line import/no-unresolved
 import { registerFontAwesomeIcons } from "~/plugins/fontAwesome";
 import TextModal from "../TextModal";
+import StubNuxtContent from "./StubNuxtContent";
 
 describe("TextModal.vue", () => {
   registerFontAwesomeIcons();
@@ -10,7 +11,10 @@ describe("TextModal.vue", () => {
     const modal = shallowMount(TextModal, {
       propsData: {
         value: true,
-        title: "Modal title",
+        text: { title: "Modal title", body: ["Test"] },
+      },
+      stubs: {
+        NuxtContent: StubNuxtContent,
       },
     });
 
@@ -21,8 +25,10 @@ describe("TextModal.vue", () => {
     const modal = shallowMount(TextModal, {
       propsData: {
         value: true,
-        title: "Title",
-        text: ["Paragraph 1", "Paragraph 2"],
+        text: { title: "Modal title", body: ["Paragraph 1", "Paragraph 2"] },
+      },
+      stubs: {
+        NuxtContent: StubNuxtContent,
       },
     });
 
@@ -34,8 +40,10 @@ describe("TextModal.vue", () => {
     const modal = shallowMount(TextModal, {
       propsData: {
         value: false,
-        title: "Title",
-        text: ["text"],
+        text: { title: "Modal title", body: ["Test"] },
+      },
+      stubs: {
+        NuxtContent: StubNuxtContent,
       },
     });
 

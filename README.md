@@ -31,7 +31,7 @@ $ yarn start
 ## 🛠️ Maintain
 ### Lint
 ```
-yarn  lint
+yarn lint
 ```
 ### Test
 

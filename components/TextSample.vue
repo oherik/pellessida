@@ -27,7 +27,6 @@
     </button>
     <Modal
       v-model="showModal"
-      :title="title"
       :text="text"
     />
   </div>
@@ -39,31 +38,23 @@ import Modal from "./TextModal";
 export default {
   components: { Modal },
   props: {
-    title: {
+    textKey: {
       type: String,
       default: "",
-    },
-    text: {
-      type: Array,
-      default: () => [],
     },
   },
   data() {
     return {
       showModal: false,
+      title: undefined,
+      text: undefined,
     };
   },
 
-  methods: {
-    contactMe() {
-      this.$emit("input", false);
-      /**
-       * It's a bit strange to use the id hard coded like this,
-       * but I feel it's petter than prop drilling/emitting in
-       * this case.
-       */
-      this.$scrollTo("#contact-me-heading");
-    },
+  async mounted() {
+    // Get the texts
+    this.text = await this.$content(this.textKey).only(["title", "body"]).fetch();
+    this.title = this.text.title;
   },
 };
 </script>
