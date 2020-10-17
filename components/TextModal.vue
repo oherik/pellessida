@@ -129,7 +129,7 @@ export default Vue.extend({
   opacity: 0;
 }
 
->>> .nuxt-content p {
+/deep/ .nuxt-content p {
   @apply text-left text-black font-body mb-4;
 }
 
