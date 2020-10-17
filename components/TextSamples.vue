@@ -1,8 +1,7 @@
 <template>
   <div class="flex flex-wrap justify-center mt-4 lg:mt-0">
     <TextSample
-      title="Båtluff i Grekland"
-      :text="tilos"
+      text-key="tilos"
     >
       <template v-slot:icon>
         <font-awesome-icon
@@ -12,8 +11,7 @@
       </template>
     </TextSample>
     <TextSample
-      title="På kryssning 1990"
-      :text="ferry"
+      text-key="1990"
     >
       <template v-slot:icon>
         <font-awesome-icon
@@ -23,8 +21,7 @@
       </template>
     </TextSample>
     <TextSample
-      title="En underlig middag – för vissa"
-      :text="dinner"
+      text-key="dinner"
     >
       <template v-slot:icon>
         <font-awesome-icon

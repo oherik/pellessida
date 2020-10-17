@@ -33,7 +33,7 @@
             <div class="my-4 lg:mb-8 lg:mt-10 mx-2 flex">
               <div class="w-1/5" />
               <h2 class="text-center font-heading my-0 font-bold text-2xl w-3/5">
-                {{ title }}
+                {{ text.title }}
               </h2>
               <div
                 class="w-1/5 items-center flex justify-end"
@@ -56,13 +56,8 @@
             </div>
             <div class="mb-12">
               <!-- The text is passed as a prop so we can edit the <p>-tag CSS here -->
-              <p
-                v-for="paragraph in text"
-                :key="paragraph.slice(0, 20)"
-                class="text-body font-body mb-4"
-              >
-                {{ paragraph }}
-              </p>
+
+              <nuxt-content :document="text" />
             </div>
             <div class="flex flex-col items-end lg:flex-row lg:items-center justify-end mb-8">
               <Button
@@ -86,24 +81,22 @@
 </template>
 
 <script>
+import Vue from "vue";
 import Button from "./Button";
 
-export default {
+export default Vue.extend({
   components: { Button },
   props: {
-    title: {
+    text: {
       type: String,
       default: "",
-    },
-    text: {
-      type: Array,
-      default: () => [],
     },
     value: {
       type: Boolean,
       default: false,
     },
   },
+
   mounted() {
     // Close on escape
     document.addEventListener("keydown", (e) => {
@@ -123,10 +116,10 @@ export default {
       this.$scrollTo("#contact-me-heading");
     },
   },
-};
+});
 </script>
 
-<style>
+<style scoped>
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.2s;
@@ -135,4 +128,9 @@ export default {
 .fade-leave-to {
   opacity: 0;
 }
+
+>>> .nuxt-content p {
+  @apply text-left text-black font-body mb-4;
+}
+
 </style>
