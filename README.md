@@ -26,7 +26,7 @@ $ yarn generate
 ## 🛠️ Maintain
 ### Lint
 ```
-yarn  lint
+yarn lint
 ```
 ### Test
 
