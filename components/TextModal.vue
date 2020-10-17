@@ -88,8 +88,8 @@ export default Vue.extend({
   components: { Button },
   props: {
     text: {
-      type: String,
-      default: "",
+      type: Object,
+      default: () => undefined,
     },
     value: {
       type: Boolean,
