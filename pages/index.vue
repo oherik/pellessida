@@ -93,13 +93,14 @@
           <p class="font-body text-base lg:text-lg text-cyan-dark">
             I formuläret här kan du skriva ett meddelande, så hör jag av mig inom
             kort. Du kan också skicka ett mail eller slå en signal.
-            <br>Pelle Öhrn
-            <!--googleoff: all-->
-            <br><span id="js-contact-phone" /> <br><span
-              id="js-contact-email"
-            />
-          <!--googleon: all-->
           </p>
+          <p class="font-body text-base lg:text-lg text-cyan-dark">
+            Pelle Öhrn
+          </p>
+          <!--googleoff: all-->
+          <p id="js-contact-phone" class="font-body text-base lg:text-lg text-cyan-dark" />
+          <p id="js-contact-email" class="font-body text-base lg:text-lg text-cyan-dark" />
+          <!--googleon: all-->
         </div>
 
         <Form class="contact__form" />
@@ -131,7 +132,32 @@
 <script lang="ts">
 import Vue from "vue";
 
-export default Vue.extend({});
+export default Vue.extend({
+
+  data() {
+    return {
+      email: `${"skri"}${"v@"}pelleohrn.se`,
+      phone: `${"076-833"}${" 64"} 41`,
+    };
+  },
+  mounted() {
+    /* Delayed to hide email and phone number in prerendering */
+    setTimeout(() => {
+      const contactForm = document.getElementById("js-contact-form");
+      if (contactForm) {
+        contactForm.setAttribute("action", `//formspree.io/${this.email}`);
+      }
+      const phoneSpan = document.getElementById("js-contact-phone");
+      if (phoneSpan) {
+        phoneSpan.innerHTML = this.email;
+      }
+      const emailSpan = document.getElementById("js-contact-email");
+      if (emailSpan) {
+        emailSpan.innerHTML = this.phone;
+      }
+    }, 500);
+  },
+});
 </script>
 
 <style>
