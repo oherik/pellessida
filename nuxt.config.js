@@ -49,16 +49,12 @@ export default {
     ],
   },
 
-  // Global CSS (https://go.nuxtjs.dev/config-css)
-  css: [
-  ],
-
-  // Plugins to run before rendering page (https://go.nuxtjs.dev/config-plugins)
+  // Plugins to run before rendering page
   plugins: [
     "~/plugins/fontAwesome.js",
   ],
 
-  // Auto import components (https://go.nuxtjs.dev/config-components)
+  // Auto import components
   components: true,
 
   buildModules: [
@@ -68,9 +64,7 @@ export default {
 
   modules: [
     "vue-scrollto/nuxt",
+    "@nuxt/content",
   ],
 
-  // Build Configuration (https://go.nuxtjs.dev/config-build)
-  build: {
-  },
 };
