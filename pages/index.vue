@@ -80,12 +80,12 @@
       </div>
     </div>
     <div
+      id="contact-me-section"
       class="bg-white shadow-2xl items-center py-12 lg:py-24 relative"
     >
       <div class="contact mx-auto w-full max-w-5xl px-4 what items-center">
         <div class="flex flex-col lg:pr-12 lg:pr-24">
           <h1
-            id="contact-me-heading"
             class="font-heading font-bold text-2xl lg:text-4xl text-cyan-dark mb-8"
           >
             Hur når du mig?

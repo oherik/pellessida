@@ -113,7 +113,7 @@ export default Vue.extend({
        * but I feel it's petter than prop drilling/emitting in
        * this case.
        */
-      this.$scrollTo("#contact-me-heading");
+      this.$scrollTo("#contact-me-section");
     },
   },
 });
@@ -129,7 +129,7 @@ export default Vue.extend({
   opacity: 0;
 }
 
-/deep/ .nuxt-content p {
+>>> .nuxt-content p {
   @apply text-left text-black font-body mb-4;
 }
 
