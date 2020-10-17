@@ -26,7 +26,7 @@
       </div>
     </div>
     <div class="who items-center">
-      <div class="flex flex-col who__text pt-12 pb-4 lg:py-24 px-4 lg:px-0">
+      <div class="flex flex-col who__text pt-12 pb-4 lg:py-24 px-4">
         <h1
           :class="[
             'font-heading font-bold text-2xl lg:text-4xl text-cyan-dark mb-8',
