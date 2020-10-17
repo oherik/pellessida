@@ -23,6 +23,11 @@ $ yarn build
 $ yarn generate
 ```
 
+### Start compiled site
+```
+$ yarn start
+```
+
 ## 🛠️ Maintain
 ### Lint
 ```
