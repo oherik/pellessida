@@ -1,6 +1,7 @@
 <template>
   <div>
     <button
+      type="button"
       :class="[
         'relative rounded text-purple-dark overflow-hidden flex flex-col',
         'items-center justify-center shadow-md bg-white',
@@ -13,7 +14,7 @@
     >
       <span />
       <div class="leading-4 text-6xl px-12 h-24 box-content flex items-center">
-        <slot name="icon"></slot>
+        <slot name="icon" />
       </div>
 
       <div
@@ -28,14 +29,12 @@
       v-model="showModal"
       :title="title"
       :text="text"
-      @clickContact="contactMe"
-    >
-    </Modal>
+    />
   </div>
 </template>
 
 <script>
-import Modal from "./TextModal.vue";
+import Modal from "./TextModal";
 
 export default {
   components: { Modal },
@@ -54,9 +53,16 @@ export default {
       showModal: false,
     };
   },
+
   methods: {
     contactMe() {
-      this.showModal = false;
+      this.$emit("input", false);
+      /**
+       * It's a bit strange to use the id hard coded like this,
+       * but I feel it's petter than prop drilling/emitting in
+       * this case.
+       */
+      this.$scrollTo("#contact-me-heading");
     },
   },
 };

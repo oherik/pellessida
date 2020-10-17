@@ -14,10 +14,10 @@
         <div
           class="absolute inset-0 opacity-0"
           @click="$emit('input', false)"
-        ></div>
+        />
         <div
           class="pointer-events-none absolute inset-0 bg-gray-900 opacity-75 "
-        ></div>
+        />
         <!-- The modal itself -->
         <div
           :class="[
@@ -86,7 +86,7 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
+import Button from "./Button";
 
 export default {
   components: { Button },

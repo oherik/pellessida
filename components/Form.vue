@@ -23,7 +23,7 @@
           type="text"
           placeholder="Namn Namnsson"
           required
-        />
+        >
       </div>
       <div class="w-full lg:w-1/2 lg:pl-2 lg:pl-3">
         <label
@@ -43,7 +43,7 @@
           type="email"
           placeholder="exempel@email.se"
           required
-        />
+        >
       </div>
     </div>
     <div class="flex flex-wrap -mx-3 mb-12 lg:mb-6 w-full">
@@ -73,13 +73,13 @@
       type="text"
       name="_gotcha"
       style="display: none"
-    />
+    >
     <input
       class="hidden"
       type="hidden"
       name="_subject"
       value="Message via http://pelleohrn.se"
-    />
+    >
 
     <Button
       type="submit"
@@ -95,7 +95,7 @@
 </template>
 
 <script>
-import Button from "./Button.vue";
+import Button from "./Button";
 
 export default {
   components: { Button },

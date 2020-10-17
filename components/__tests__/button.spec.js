@@ -1,5 +1,5 @@
 import { shallowMount } from "@vue/test-utils";
-import Button from "../Button.vue";
+import Button from "../Button";
 
 describe("Button.vue", () => {
   it("renders the text passed in the slot", () => {

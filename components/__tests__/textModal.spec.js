@@ -1,6 +1,7 @@
 import { shallowMount } from "@vue/test-utils";
-import registerFontAwesomeIcons from "../../fontAwesome";
-import TextModal from "../TextModal.vue";
+// eslint-disable-next-line import/no-unresolved
+import { registerFontAwesomeIcons } from "~/plugins/fontAwesome";
+import TextModal from "../TextModal";
 
 describe("TextModal.vue", () => {
   registerFontAwesomeIcons();

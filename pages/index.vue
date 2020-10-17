@@ -22,7 +22,7 @@
           src="@/assets/images/typewriter.svg"
           class="hero__image mx-auto lg:mx-0 pt-8 lg:pt-0 lg:pl-24 h-full"
           alt="typewriter"
-        />
+        >
       </div>
     </div>
     <div class="who items-center">
@@ -46,12 +46,12 @@
         :src="require('@/assets/images/pelle.jpg')"
         class="p-3 lg:p-4 self-center lg:justify-self-center who__image block lg:hidden"
         alt="Pelle Öhrn"
-      />
+      >
       <img
         :src="require('@/assets/images/pelle-slanted.png')"
         class="p-3 lg:p-4 self-center who__image hidden lg:block"
         alt="Pelle Öhrn"
-      />
+      >
     </div>
     <div
       class="bg-gradient-lightpurple-to-pink items-center py-12 lg:py-24"
@@ -93,9 +93,9 @@
           <p class="font-body text-base lg:text-lg text-cyan-dark">
             I formuläret här kan du skriva ett meddelande, så hör jag av mig inom
             kort. Du kan också skicka ett mail eller slå en signal.
-            <br />Pelle Öhrn
+            <br>Pelle Öhrn
             <!--googleoff: all-->
-            <br /><span id="js-contact-phone" /> <br /><span
+            <br><span id="js-contact-phone" /> <br><span
               id="js-contact-email"
             />
           <!--googleon: all-->
@@ -128,35 +128,13 @@
   </div>
 </template>
 
-<script>
-import Form from "../components/Form.vue";
-import Painting from "../components/Painting.vue";
-import TextSamples from "../components/TextSamples.vue";
+<script lang="ts">
+import Vue from "vue";
 
-export default {
-  components: {
-    Form,
-    Painting,
-    TextSamples,
-  },
-  data() {
-    return {
-      email: `${"skri"}${"v@"}pelleohrn.se`,
-      phone: `${"076-833"}${" 64"} 41`,
-    };
-  },
-  mounted() {
-    /* Delayed to hide email and phone number in prerendering */
-    setTimeout(() => {
-      document.getElementById("js-contact-phone").innerHTML = this.email;
-      document.getElementById("js-contact-email").innerHTML = this.phone;
-    }, 1000);
-  },
-};
+export default Vue.extend({});
 </script>
 
-<style scoped>
-@import url("https://fonts.googleapis.com/css?family=Merriweather+Sans:400,700,800|Open+Sans&display=swap");
+<style>
 
 .bg-gradient-cyan-to-turquoise {
   background: linear-gradient(285deg, #a4e9d7, #73cfd4);

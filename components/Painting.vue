@@ -16,7 +16,7 @@
         src="@/assets/images/painting-by-copywriter.png"
         class="p-3 h-full shadow-md"
         alt="Painting by copywriter"
-      />
+      >
     </div>
   </div>
 </template>
