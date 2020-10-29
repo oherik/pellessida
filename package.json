@@ -21,7 +21,7 @@
     "@types/jest": "^26.0.14",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
-    "vue-scrollto": "^2.19.1"
+    "vue-scrollto": "^2.20.0"
   },
   "devDependencies": {
     "@nuxt/types": "^2.14.7",
