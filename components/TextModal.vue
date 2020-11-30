@@ -110,7 +110,7 @@ export default Vue.extend({
       this.$emit("input", false);
       /**
        * It's a bit strange to use the id hard coded like this,
-       * but I feel it's petter than prop drilling/emitting in
+       * but I feel it's better than prop drilling/emitting in
        * this case.
        */
       this.$scrollTo("#contact-me-section");
