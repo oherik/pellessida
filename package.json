@@ -18,7 +18,7 @@
     "@fortawesome/vue-fontawesome": "^2.0.0",
     "@nuxt/content": "^1.10.0",
     "@nuxt/typescript-runtime": "^2.0.0",
-    "@types/jest": "^26.0.14",
+    "@types/jest": "^26.0.15",
     "core-js": "^3.6.5",
     "nuxt": "^2.14.6",
     "vue-scrollto": "^2.20.0"
