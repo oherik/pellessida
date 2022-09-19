@@ -19,7 +19,7 @@
     "@nuxt/content": "^1.10.0",
     "@nuxt/typescript-runtime": "^2.0.0",
     "@types/jest": "^26.0.15",
-    "core-js": "^3.6.5",
+    "core-js": "^3.25.2",
     "nuxt": "^2.14.6",
     "vue-scrollto": "^2.20.0"
   },
